@@ -17,6 +17,7 @@ Route::resource('indicadors', 'IndicadorController');
 Route::resource('notas', 'NotaController');
 Route::resource('asignacions', 'AsignacionController');
 Route::resource('periodos', 'PeriodoController');
+Route::get('planillas/refresh/{planilla}', 'PlanillaController@updateDefinitivas')->name('planillas.refresh');
 Route::get('planillas/reset/{planilla}','PlanillaController@reset')->name('planillas.reset');
 Route::resource('planillas', 'PlanillaController')->except(['show']);
 Route::resource('reportes', 'ReportesController')->only(['index']);
