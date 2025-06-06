@@ -46,8 +46,7 @@
             "ATS\\": "app/"
         },
         "files": [
-            "app/Helpers/VariosHelpers.php",
-            "app/Helpers/NotasHelpers.php"
+            "app/Helpers/VariosHelpers.php"
         ]
     },
     "autoload-dev": {
