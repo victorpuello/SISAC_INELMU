@@ -15,10 +15,6 @@ class AcudienteController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function index()
-    {
-        //
-    }
 
 
     /**
@@ -49,10 +45,6 @@ class AcudienteController extends Controller
      * @param  \ATS\Acudiente  $acudiente
      * @return \Illuminate\Http\Response
      */
-    public function show(Acudiente $acudiente)
-    {
-        //
-    }
 
     /**
      * Show the form for editing the specified resource.
@@ -88,6 +80,7 @@ class AcudienteController extends Controller
      */
     public function destroy(Acudiente $acudiente)
     {
-        //
+        $acudiente->delete();
+        return redirect()->back();
     }
 }

@@ -51,12 +51,6 @@ class AspectoController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function show($id)
-    {
-        //
-    }
-
-
     /**
      * @param Aspecto $aspecto
      * @return \Illuminate\Contracts\View\Factory|\Illuminate\View\View

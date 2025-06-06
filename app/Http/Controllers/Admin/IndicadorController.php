@@ -73,11 +73,6 @@ class IndicadorController extends Controller
      * @param  \ATS\Indicador  $indicador
      * @return \Illuminate\Http\Response
      */
-    public function show(Indicador $indicador)
-    {
-        //
-    }
-
     /**
      * Show the form for editing the specified resource.
      *

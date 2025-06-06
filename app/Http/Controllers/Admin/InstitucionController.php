@@ -36,14 +36,6 @@ class InstitucionController extends Controller
 
     /**
      * @param Institucion $institucion
-     */
-    public function show(Institucion $institucion)
-    {
-
-    }
-
-    /**
-     * @param Institucion $institucion
      * @return \Illuminate\Contracts\View\Factory|\Illuminate\View\View
      */
     public function edit(Institucion $institucion)
@@ -64,6 +56,7 @@ class InstitucionController extends Controller
 
     public function destroy(Institucion $institucion)
     {
-        //
+        $institucion->delete();
+        return redirect()->route('institucions.index');
     }
 }

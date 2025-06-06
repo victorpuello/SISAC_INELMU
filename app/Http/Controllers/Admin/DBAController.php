@@ -15,7 +15,8 @@ class DBAController extends Controller
      */
     public function index(Request $request)
     {
-        dd($request->all());
+        $dbas = DBA::with(['area','grado'])->get();
+        return view('admin.dbas.index', compact('dbas'));
     }
 
     /**
