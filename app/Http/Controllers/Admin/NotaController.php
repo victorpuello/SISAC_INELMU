@@ -37,10 +37,6 @@ class NotaController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function create()
-    {
-
-    }
 
     /**
      * @param NotaDataTablesEditor $editor
@@ -58,10 +54,6 @@ class NotaController extends Controller
      * @param  \ATS\Nota  $nota
      * @return \Illuminate\Http\Response
      */
-    public function show($id)
-    {
-
-    }
 
     /**
      * Show the form for editing the specified resource.
@@ -76,10 +68,6 @@ class NotaController extends Controller
     }
 
 
-    public function update(Request $request, $id)
-    {
-
-    }
 
     /**
      * Remove the specified resource from storage.
@@ -87,9 +75,5 @@ class NotaController extends Controller
      * @param  \ATS\Nota  $nota
      * @return \Illuminate\Http\Response
      */
-    public function destroy(Nota $nota)
-    {
-        //
-    }
 
 }

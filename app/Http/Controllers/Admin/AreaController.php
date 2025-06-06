@@ -29,9 +29,6 @@ class AreaController extends Controller
         $area->save();
         return redirect()->route('areas.index');
     }
-    public function show(Area $area){
-
-    }
     public function edit(Area $area){
         return view('admin.areas.ajax.edit',compact('area'));
     }

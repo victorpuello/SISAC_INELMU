@@ -24,15 +24,6 @@ class PlanillaController extends Controller
        return view('admin.planillas.index',compact('planillas','docente'));
    }
 
-    public function create()
-    {
-
-    }
-
-    public function store(Request $request)
-    {
-
-    }
 
     public function show(Request $request, Planilla $planilla)
     {
@@ -45,14 +36,9 @@ class PlanillaController extends Controller
         return view('admin.planillas.show', compact('planilla'));
     }
 
-    public function edit(Planilla $planilla)
-    {
-
-    }
 
     public function update(Request $request, Planilla $planilla)
     {
-        dd($planilla);
         $planilla->update($request->all());
         $data = [
             'messaje' => 'Planilla editada con exito'
@@ -60,10 +46,6 @@ class PlanillaController extends Controller
         return response()->json($data,200);
     }
 
-    public function destroy(Planilla $planilla)
-    {
-
-    }
 
     public function getFiltro(Request $request){
         $docentes = Docente::has('asignaciones')->pluck('name','id');

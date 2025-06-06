@@ -27,10 +27,6 @@ class JornadaController extends Controller
         $jornada->save();
         return redirect()->route('jornadas.index');
     }
-    public function show(Jornada $jornada)
-    {
-       //
-    }
     public function edit(Jornada $jornada)
     {
         return view('admin.jornadas.ajax.edit',compact('jornada'));

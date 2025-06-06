@@ -75,11 +75,6 @@ class AsignacionController extends Controller
     /**
      * @param Asignacion $asignacion
      */
-    public function show(Asignacion $asignacion)
-    {
-        //
-    }
-
     /**
      * @param Asignacion $asignacion
      * @return \Illuminate\Contracts\View\Factory|\Illuminate\View\View
