@@ -3,7 +3,7 @@
 namespace ATS\Http\Middleware;
 
 use ATS\Clases\Indicador\IndicadoresPlanilla;
-use ATS\Clases\Planilla\ConfigPlanillass;
+use ATS\Clases\Planilla\ConfigPlanillas;
 use ATS\Exceptions\IndicadoresException;
 use Closure;
 use Illuminate\Auth\Access\AuthorizationException;
@@ -22,7 +22,7 @@ class VerifyIndicadores
      */
     public function handle($request, Closure $next)
     {
-        $conf = new ConfigPlanillass();
+        $conf = new ConfigPlanillas();
         $indicadores = new IndicadoresPlanilla($request->planilla);
         if (! $this->CheckStatus($indicadores,$conf)){
             throw new IndicadoresException();
@@ -32,10 +32,10 @@ class VerifyIndicadores
 
     /**
      * @param IndicadoresPlanilla $indicadores
-     * @param ConfigPlanillass $conf
+     * @param ConfigPlanillas $conf
      * @return bool
      */
-    public function CheckStatus(IndicadoresPlanilla $indicadores, ConfigPlanillass $conf){
+    public function CheckStatus(IndicadoresPlanilla $indicadores, ConfigPlanillas $conf){
         return $indicadores->countInd() === $conf->nro_indicadores();
     }
 

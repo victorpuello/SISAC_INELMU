@@ -12,7 +12,7 @@ namespace ATS\Clases\Planilla;
 
 use Illuminate\Support\Facades\Config;
 
-class ConfigPlanillass
+class ConfigPlanillas
 {
     /**
      * @var array
